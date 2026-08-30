@@ -14,22 +14,13 @@ def print_image_information(image):
 print_image_information(image)
 
 
-import cv2
-
 cam = cv2.VideoCapture(0)
 
 frame_width = int(cam.get(cv2.CAP_PROP_FRAME_WIDTH))
 frame_height = int(cam.get(cv2.CAP_PROP_FRAME_HEIGHT))
 cam_fps= int(cam.get(cv2.CAP_PROP_FPS))
 
-
-print("Frame width:", frame_width)
-print("Frame height:", frame_height)
-print("Camera FPS:", cam_fps)
-
 cam.release()
-
-
 
 with open("solutions/camera_outputs.txt", "w") as f:
     f.write("fps: " + str(cam_fps) + "\n")
