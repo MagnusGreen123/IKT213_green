@@ -31,7 +31,7 @@ cam.release()
 
 
 
-with open("camere_outputs.txt", "w") as f:
+with open("solutions/camera_outputs.txt", "w") as f:
     f.write("fps: " + str(cam_fps) + "\n")
     f.write("frame_height: " + str(frame_height) + "\n")
     f.write("frame_width: " + str(frame_width))
