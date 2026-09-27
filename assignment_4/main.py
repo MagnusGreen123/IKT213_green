@@ -58,10 +58,9 @@ def align(image_to_align, reference_image, max_features, good_match_precent):
     cv2.imwrite("solutions/matches.png", match_pic)
 
 
-if __name__ == "__main__":
-    reference_image = cv2.imread("reference_img.png")
-    image_to_align = cv2.imread("align_this.jpg")
+reference_image = cv2.imread("reference_img.png")
+image_to_align = cv2.imread("align_this.jpg")
 
-    harris(reference_image)
+harris(reference_image)
 
-    align(image_to_align, reference_image, 10, 0.7)
+align(image_to_align, reference_image, 10, 0.7)
